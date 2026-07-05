@@ -74,7 +74,7 @@ async def cmd_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await _cache_user(user.id, user.username, db_user.language)
     log.info("/start user_id=%s username=%s language=%s", user.id, user.username, db_user.language)
     await update.message.reply_text(
-        f"Welcome to Afriklang Voicemail, @{user.username or user.id}!\n\n"
+        f"Welcome to Bambi AI Voicemail, @{user.username or user.id}!\n\n"
         "• /lang twi  or  /lang wolof — set your language\n"
         "• /send @username — then record a voice note to leave them a voicemail\n"
         "• /inbox — check messages left for you\n\n"

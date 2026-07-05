@@ -1,5 +1,5 @@
 """
-Afriklang ASR + OpenAI TTS integration.
+Teeki AI ASR + OpenAI TTS integration.
 
 ASR  — POST /transcribe/twi  or  /transcribe/wo  (multipart, field: file)
 TTS  — OpenAI /v1/audio/speech (model tts-1, format opus → Telegram-compatible .ogg)
@@ -66,7 +66,7 @@ async def _call_asr(audio_path: str, language: str) -> str:
     if not path_segment:
         raise ValueError(f"Unsupported language: {language!r}. Supported: {list(_LANG_TO_PATH)}")
 
-    url = f"{settings.AFRIKLANG_BASE_URL.rstrip('/')}/transcribe/{path_segment}"
+    url = f"{settings.TEEKI_BASE_URL.rstrip('/')}/transcribe/{path_segment}"
 
     async with aiofiles.open(audio_path, "rb") as f:
         audio_bytes = await f.read()

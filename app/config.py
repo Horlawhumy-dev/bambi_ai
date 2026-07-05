@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     # Leave empty to skip webhook registration (useful during local dev with polling override)
     WEBHOOK_BASE_URL: str
     MOCK_MODE: bool
-    AFRIKLANG_BASE_URL: str  # e.g. https://asr.afriklang.com
+    TEEKI_BASE_URL: str
     AUDIO_DIR: str
     OPENAI_API_KEY: str = ""  # optional: empty string disables TTS voice replies
 

@@ -60,9 +60,9 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="Afriklang Voicemail",
-    description="Async voicemail over Telegram with Afriklang ASR/TTS",
-    version="2.0.0",
+    title="Teeki AI Voicemail",
+    description="Async voicemail over Telegram with Teeki AI ASR/TTS",
+    version="1.0.0",
     lifespan=lifespan,
 )
 

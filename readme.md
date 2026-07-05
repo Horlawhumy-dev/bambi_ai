@@ -1,4 +1,4 @@
-# Afriklang Voicemail POC (Telegram, no telecom)
+# Bambi AI Voicemail POC (Telegram, no telecom)
 
 A minimal store-and-forward voicemail system over Telegram — no PSTN, IVR,
 USSD, or carrier partnership required. Proves two things:
@@ -42,12 +42,12 @@ good for demoing the full flow today.
 5. User A instantly gets a transcript confirmation back
 6. User B gets a notification, then runs `/inbox` to hear + read it
 
-## Wiring in your real Afriklang ASR/TTS
+## Wiring in your real Teeki AI ASR/TTS
 
 Open `speech.py`:
-- Fill in `call_afriklang_asr()` to POST audio to your actual ASR endpoint
+- Fill in `call_teeki_asr()` to POST audio to your actual ASR endpoint
   (Twi/Wolof model) and return the transcript.
-- Fill in `call_afriklang_tts()` if/when you want a spoken auto-reply
+- Fill in `call_teeki_tts()` if/when you want a spoken auto-reply
   instead of text-only.
 - Set `MOCK_MODE=false` in your environment once both are ready.
 
